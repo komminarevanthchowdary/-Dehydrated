@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reneplane — Best Organic Powder Products | USA, UK, Canada, Australia, Brazil, Philippines, India</title>
+    <meta name="description" content="Explore Reneplane's premium best organic powder products. 100% pure, USDA certified organic. Shipping to USA, UK, Canada, Australia, Brazil, Philippines, and across India (Mumbai, Delhi, Bangalore). Shop and get doorstep delivery.">
+    <meta name="keywords" content="Reneplane, best organic powders, organic moringa powder, organic onion powder, organic banana powder, organic papaya leaf powder, natural superfoods, USDA organic powders, health supplements, organic diet powders, best superfood powders USA, organic powder products UK, premium organic powders Canada, natural health supplements Australia, organic nutritional powders Brazil, best organic powders Philippines, pure moringa powder, pure onion powder, pure banana powder, pure papaya leaf powder, buy organic powders online, top rated organic powders, best organic superfoods, natural wellness powders, 100% pure organic powders, non-GMO organic powders, vegan superfood powders, plant-based health powders, organic food supplements, best natural powders, organic superfood blends, immune support powders, organic energy powders, pure organic spices, best organic onion seasoning, organic banana smoothie powder, organic moringa leaf extract, organic papaya leaf supplement, high quality organic powders, best organic superfoods USA, best organic superfoods UK, best organic superfoods Canada, best organic superfoods Australia, best organic superfoods Brazil, best organic superfoods Philippines, worldwide shipping organic powders, global organic powder delivery, buy moringa powder USA, buy moringa powder UK, buy moringa powder Canada, buy moringa powder Australia, buy moringa powder Brazil, buy moringa powder Philippines, organic wellness products, daily organic supplements, best organic super greens, natural organic seasoning, premium organic baking ingredients, best organic smoothie powders, pure organic health products, natural diet supplements, USDA certified superfoods, best organic nutrition, organic dietary powders, natural stamina powders, organic cooking powders, raw organic powders, pure botanical powders, best organic extracts, natural wellness supplements, pure green powders, organic fruit powders, organic vegetable powders, premium natural powders, best organic food powders, organic nutrition supplements, healthy organic lifestyle products, organic moringa capsules alternative, organic immunity boosters, pure plant extracts, best organic health supplements, natural vitality powders, organic superfood powder blends, organic superfood nutrition, premium natural superfoods, best organic food supplements, pure leaf powders, best organic pantry staples, organic superfood drinks, top organic powder brand, reneplane organic products, premium wellness powders, organic holistic health, best organic ingredients, best pure organic powders, premium natural health foods, organic nutritional supplements, best organic superfood powder brand, natural organic wellness supplements, highest quality organic powders, best organic powders India, organic superfoods Mumbai, natural health supplements Delhi, buy organic powders Bangalore, pure moringa powder Hyderabad, organic onion powder Chennai, organic banana powder Kolkata, organic papaya leaf powder Pune, organic wellness products Ahmedabad">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Auth0 SPA SDK -->
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <link rel="stylesheet" href="style.css?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://reneplane.com/#organization",
+      "name": "Reneplane",
+      "url": "https://reneplane.com/",
+      "logo": "https://reneplane.com/images/moringa-powder.jpg",
+      "description": "Premium organic powder products sourced from certified organic farms."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://reneplane.com/#website",
+      "url": "https://reneplane.com/",
+      "name": "Reneplane",
+      "publisher": {
+        "@id": "https://reneplane.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I use the powder products?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add 1\u20132 teaspoons to smoothies, juices, soups, or sprinkle over salads. It blends easily into any recipe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are these products suitable for vegans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! All Reneplane powders are 100% plant-based, vegan, and free from any animal-derived ingredients."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does shipping take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard shipping takes 3\u20137 business days. Express options are available at checkout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the shelf life?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our powders have a shelf life of 24 months when stored in a cool, dry place with the resealable pouch properly sealed."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://reneplane.com/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+
+    <!-- ====== AUTH OVERLAY ====== -->
+    <div class="auth-overlay" id="authOverlay">
+        <div class="auth-modal glass-card-white">
+            <button class="auth-modal-close" id="authModalClose" aria-label="Close">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <!-- Step 1: Login / Signup -->
+            <div class="auth-step" id="authStep1">
+                <div class="auth-header">
+                    <span class="brand-icon-lg">🌿</span>
+                    <h2>Welcome to Reneplane</h2>
+                    <p>Sign in or create an account to continue</p>
+                </div>
+                <button class="btn btn-auth0" id="auth0LoginBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+                    <span>Continue with Auth0</span>
+                </button>
+                <div class="auth-divider"><span>or sign in manually</span></div>
+                <form class="auth-form" id="manualAuthForm">
+                    <div class="form-group">
+                        <label for="authFullName" class="form-label">Full Name <span class="required">*</span></label>
+                        <input type="text" id="authFullName" class="form-input" placeholder="John Doe" required>
+                        <span class="form-error" id="authNameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="authEmail" class="form-label">Email ID <span class="required">*</span></label>
+                        <input type="email" id="authEmail" class="form-input" placeholder="john@example.com" required>
+                        <span class="form-error" id="authEmailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="authMobile" class="form-label">Mobile Number <span class="required">*</span></label>
+                        <div class="phone-input-group">
+                            <select id="authCountryCode" class="form-input phone-code-select">
+                                <option value="+91">🇮🇳 +91</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+61">🇦🇺 +61</option>
+                                <option value="+971">🇦🇪 +971</option>
+                                <option value="+65">🇸🇬 +65</option>
+                                <option value="+81">🇯🇵 +81</option>
+                            </select>
+                            <input type="tel" id="authMobile" class="form-input phone-number-input" placeholder="98765 43210" required>
+                        </div>
+                        <span class="form-error" id="authMobileError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="sendOtpBtn">
+                        <span>Send Verification Code</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Step 2: OTP Verification -->
+            <div class="auth-step" id="authStep2" style="display:none;">
+                <div class="auth-header">
+                    <div class="otp-icon-wrap">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    </div>
+                    <h2>Verify Your Number</h2>
+                    <p>We've sent a 6-digit code to <strong id="otpSentTo"></strong></p>
+                </div>
+                <div class="otp-inputs" id="otpInputs">
+                    <input type="text" maxlength="1" class="otp-box" data-index="0" inputmode="numeric" autocomplete="one-time-code">
+                    <input type="text" maxlength="1" class="otp-box" data-index="1" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-box" data-index="2" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-box" data-index="3" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-box" data-index="4" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-box" data-index="5" inputmode="numeric">
+                </div>
+                <span class="form-error otp-error" id="otpError"></span>
+                <button class="btn btn-primary btn-full" id="verifyOtpBtn">
+                    <span>Verify & Continue</span>
+                </button>
+                <div class="otp-resend">
+                    <span>Didn't receive the code?</span>
+                    <button class="link-btn" id="resendOtpBtn" disabled>Resend in <span id="resendTimer">30</span>s</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Verified -->
+            <div class="auth-step" id="authStep3" style="display:none;">
+                <div class="auth-header">
+                    <div class="success-check-wrap">
+                        <svg class="checkmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                    </div>
+                    <h2>Welcome, <span id="verifiedName"></span>!</h2>
+                    <p>Your account is verified. You can now shop and checkout.</p>
+                </div>
+                <button class="btn btn-primary btn-full" id="startShoppingBtn">
+                    <span>Start Shopping</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== PROFILE OVERLAY ====== -->
+    <div class="auth-overlay" id="profileOverlay">
+        <div class="auth-modal glass-card-white profile-modal">
+            <button class="auth-modal-close" id="profileModalClose" aria-label="Close">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="auth-header" style="margin-bottom: var(--space-md);">
+                <h2>My Account</h2>
+            </div>
+            <div class="profile-tabs">
+                <button class="profile-tab active" data-tab="details">Details</button>
+                <button class="profile-tab" data-tab="addresses">Addresses</button>
+                <button class="profile-tab" data-tab="orders">Orders</button>
+            </div>
+            
+            <div class="profile-content">
+                <!-- Details Tab -->
+                <div class="profile-tab-content" id="tab-details">
+                    <div class="profile-detail-row"><span>Name:</span> <strong id="profileName"></strong></div>
+                    <div class="profile-detail-row"><span>Email:</span> <strong id="profileEmail"></strong></div>
+                    <div class="profile-detail-row"><span>Mobile:</span> <strong id="profileMobile"></strong></div>
+                </div>
+
+                <!-- Addresses Tab -->
+                <div class="profile-tab-content" id="tab-addresses" style="display:none;">
+                    <div id="addressList" class="address-list"></div>
+                    <button class="btn btn-outline btn-sm btn-full" id="addNewAddressBtn" style="margin-top: var(--space-md);">+ Add New Address</button>
+                    
+                    <form id="newAddressForm" style="display:none; margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid var(--clr-border-light);">
+                        <div class="form-group">
+                            <input type="text" id="newAddrLine1" class="form-input" placeholder="Address Line 1" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="newAddrLine2" class="form-input" placeholder="Address Line 2 (Optional)">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><input type="text" id="newAddrCity" class="form-input" placeholder="City" required></div>
+                            <div class="form-group"><input type="text" id="newAddrState" class="form-input" placeholder="State" required></div>
+                        </div>
+                        <div class="form-group"><input type="text" id="newAddrZip" class="form-input" placeholder="ZIP Code" required></div>
+                        <div style="display:flex; gap: 10px;">
+                            <button type="submit" class="btn btn-primary btn-sm" style="flex:1;">Save Address</button>
+                            <button type="button" class="btn btn-outline btn-sm" id="cancelAddressBtn" style="flex:1;">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Orders Tab -->
+                <div class="profile-tab-content" id="tab-orders" style="display:none;">
+                    <div class="order-list" id="orderList">
+                        <!-- Orders injected by JS -->
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn" id="signOutBtn" style="margin-top: var(--space-md); width: 100%; border: 1px solid #fca5a5; color: #ef4444; background: transparent; padding: 10px; border-radius: var(--radius-full); font-weight: 600; cursor: pointer;">
+                <span>Sign Out</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ====== PARTNER OVERLAY ====== -->
+    <div class="auth-overlay" id="partnerOverlay">
+        <div class="auth-modal glass-card-white">
+            <button class="auth-modal-close" id="partnerModalClose" aria-label="Close">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="auth-header">
+                <span class="brand-icon-lg">🤝</span>
+                <h2>Partner with Us</h2>
+                <p>Join hands with Reneplane to distribute premium organic powders.</p>
+            </div>
+            <form class="auth-form" id="partnerForm">
+                <div class="form-group">
+                    <label class="form-label">Company Name <span class="required">*</span></label>
+                    <input type="text" id="partnerCompany" class="form-input" placeholder="Your Business" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Contact Person <span class="required">*</span></label>
+                    <input type="text" id="partnerName" class="form-input" placeholder="John Doe" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Email <span class="required">*</span></label>
+                        <input type="email" id="partnerEmail" class="form-input" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone <span class="required">*</span></label>
+                        <input type="tel" id="partnerPhone" class="form-input" placeholder="+1 123 456 7890" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="partnerSubmitBtn">
+                    <span>Submit Application</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand" id="nav-brand">
+                <span class="brand-icon">🌿</span>
+                <span class="brand-text">Reneplane</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#products" class="nav-link" data-section="products">Products</a></li>
+                <li><a href="#details" class="nav-link" data-section="details">Why Us</a></li>
+                <li><a href="#faq" class="nav-link" data-section="faq">FAQ</a></li>
+                <li><a href="#" class="nav-link" id="navPartnerBtn">Partner with Us</a></li>
+            </ul>
+            <div class="nav-right">
+                <!-- Login / Sign Up Button (visible when not logged in) -->
+                <button class="btn btn-nav-login" id="navLoginBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+                    <span>Login / Sign Up</span>
+                </button>
+                <!-- User Profile (visible when logged in) -->
+                <button class="nav-user-btn" id="navUserBtn" title="Account" style="display:none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span class="user-name-display" id="userNameDisplay"></span>
+                </button>
+                <!-- My Orders Button (visible when logged in) -->
+                <button class="nav-btn-orders" id="navOrdersBtn" title="My Orders" style="display:none;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    <span>My Orders</span>
+                </button>
+                <!-- Cart Button -->
+                <button class="cart-btn" id="cartBtn" title="Shopping Cart">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== CART DRAWER ====== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                Your Cart
+            </h3>
+            <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <div class="cart-items-list" id="cartItemsList">
+            <!-- Cart items rendered here -->
+            <div class="cart-empty" id="cartEmpty">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                <p>Your cart is empty</p>
+                <span>Add products to get started</span>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+            <div class="cart-shipping-note">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <span>Free shipping on 3+ packs</span>
+            </div>
+            <button class="btn btn-primary btn-full" id="checkoutBtn">
+                <span>Proceed to Checkout</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </aside>
+
+    <!-- ====== CHECKOUT OVERLAY ====== -->
+    <div class="checkout-overlay" id="checkoutOverlay">
+        <div class="checkout-modal glass-card-white">
+            <button class="auth-modal-close" id="checkoutClose" aria-label="Close">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+
+            <!-- Checkout Step 1: Review -->
+            <div class="checkout-step" id="checkoutStep1">
+                <div class="checkout-header">
+                    <div class="checkout-steps-bar">
+                        <div class="step-dot active" data-step="1"><span>1</span></div>
+                        <div class="step-line"></div>
+                        <div class="step-dot" data-step="2"><span>2</span></div>
+                        <div class="step-line"></div>
+                        <div class="step-dot" data-step="3"><span>3</span></div>
+                    </div>
+                    <h2>Review Your Cart</h2>
+                </div>
+                <div class="checkout-cart-summary" id="checkoutCartSummary">
+                    <!-- Items listed here by JS -->
+                </div>
+                <div class="checkout-total-row">
+                    <span>Total</span>
+                    <strong id="checkoutTotal">$0.00</strong>
+                </div>
+                <button class="btn btn-primary btn-full" id="toAddressBtn">
+                    <span>Continue to Address</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+
+            <!-- Checkout Step 2: Address -->
+            <div class="checkout-step" id="checkoutStep2" style="display:none;">
+                <div class="checkout-header">
+                    <div class="checkout-steps-bar">
+                        <div class="step-dot done" data-step="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+                        <div class="step-line filled"></div>
+                        <div class="step-dot active" data-step="2"><span>2</span></div>
+                        <div class="step-line"></div>
+                        <div class="step-dot" data-step="3"><span>3</span></div>
+                    </div>
+                    <h2>Delivery Address</h2>
+                </div>
+                <form class="checkout-form" id="addressForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" id="addrName" class="form-input" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" id="addrPhone" class="form-input" placeholder="+91 98765 43210" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Address Line 1</label>
+                        <input type="text" id="addrLine1" class="form-input" placeholder="House/Flat No, Building" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Address Line 2</label>
+                        <input type="text" id="addrLine2" class="form-input" placeholder="Street, Locality">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">City</label>
+                            <input type="text" id="addrCity" class="form-input" placeholder="Mumbai" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">State / Province</label>
+                            <input type="text" id="addrState" class="form-input" placeholder="Maharashtra" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">PIN / ZIP Code</label>
+                            <input type="text" id="addrZip" class="form-input" placeholder="400001" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Country</label>
+                            <select id="addrCountry" class="form-input">
+                                <option value="India">India</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Australia">Australia</option>
+                                <option value="UAE">UAE</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Canada">Canada</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="checkout-nav-btns">
+                        <button type="button" class="btn btn-outline" id="backToCartBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                            <span>Back</span>
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="toPaymentBtn">
+                            <span>Continue to Payment</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Checkout Step 3: Payment -->
+            <div class="checkout-step" id="checkoutStep3" style="display:none;">
+                <div class="checkout-header">
+                    <div class="checkout-steps-bar">
+                        <div class="step-dot done" data-step="1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+                        <div class="step-line filled"></div>
+                        <div class="step-dot done" data-step="2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+                        <div class="step-line filled"></div>
+                        <div class="step-dot active" data-step="3"><span>3</span></div>
+                    </div>
+                    <h2>Payment Method</h2>
+                </div>
+                <div class="payment-methods">
+                    <label class="payment-option active" id="payCard">
+                        <input type="radio" name="payMethod" value="card" checked>
+                        <div class="payment-option-inner">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            <span>Credit / Debit Card</span>
+                        </div>
+                    </label>
+                    <label class="payment-option" id="payUPI">
+                        <input type="radio" name="payMethod" value="upi">
+                        <div class="payment-option-inner">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01" stroke-width="3" stroke-linecap="round"/></svg>
+                            <span>UPI / Mobile Pay</span>
+                        </div>
+                    </label>
+                    <label class="payment-option" id="payCOD">
+                        <input type="radio" name="payMethod" value="cod">
+                        <div class="payment-option-inner">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                            <span>Cash on Delivery</span>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Card Form -->
+                <div class="card-form" id="cardForm">
+                    <div class="form-group">
+                        <label class="form-label">Card Number</label>
+                        <input type="text" id="cardNumber" class="form-input" placeholder="1234  5678  9012  3456" maxlength="19" inputmode="numeric">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Expiry</label>
+                            <input type="text" id="cardExpiry" class="form-input" placeholder="MM / YY" maxlength="7">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">CVV</label>
+                            <input type="password" id="cardCVV" class="form-input" placeholder="•••" maxlength="4" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Name on Card</label>
+                        <input type="text" id="cardName" class="form-input" placeholder="JOHN DOE">
+                    </div>
+                </div>
+
+                <!-- UPI Form -->
+                <div class="upi-form" id="upiForm" style="display:none;">
+                    <div class="form-group">
+                        <label class="form-label">UPI ID</label>
+                        <input type="text" id="upiId" class="form-input" placeholder="yourname@upi">
+                    </div>
+                </div>
+
+                <!-- COD Message -->
+                <div class="cod-message" id="codMessage" style="display:none;">
+                    <div class="cod-info">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                        <p>Pay with cash when your order is delivered. An additional charge of ₹40 may apply.</p>
+                    </div>
+                </div>
+
+                <div class="order-summary-mini">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="paySubtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span id="payShipping" class="shipping-free">FREE</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <strong>Total</strong>
+                        <strong id="payTotal">$0.00</strong>
+                    </div>
+                </div>
+
+                <div class="checkout-nav-btns">
+                    <button type="button" class="btn btn-outline" id="backToAddressBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        <span>Back</span>
+                    </button>
+                    <button type="button" class="btn btn-primary" id="placeOrderBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Place Order</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Checkout Step 4: Order Confirmed -->
+            <div class="checkout-step" id="checkoutStep4" style="display:none;">
+                <div class="auth-header" style="padding:2rem 0;">
+                    <div class="success-check-wrap large">
+                        <svg class="checkmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                    </div>
+                    <h2>Order Confirmed! 🎉</h2>
+                    <p>Your order <strong id="orderIdDisplay">#RP-000000</strong> has been placed successfully.</p>
+                    <p class="order-confirm-sub">We'll send a confirmation to your email and mobile shortly.</p>
+                </div>
+                <div class="order-confirm-details" id="orderConfirmDetails">
+                    <!-- Filled by JS -->
+                </div>
+                <button class="btn btn-primary btn-full" id="continueShopping">
+                    <span>Continue Shopping</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-slider-wrap" id="heroSliderWrap">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="pulse-dot"></span>
+                            100% Organic & Natural
+                        </div>
+                        <h1 class="hero-title">
+                            Reneplane<br>
+                            <span class="gradient-text">Moringa Powder</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            The best organic powders on the market. Pure leaves without stems. USDA certified organic, GMO free, and filler free. Proudly shipping to USA, UK, Canada, Australia, Brazil, Philippines, and across India (Mumbai, Delhi, Bangalore & more).
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#products" class="btn btn-primary">
+                                <span>Shop Now</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#details" class="btn btn-outline"><span>Learn More</span></a>
+                        </div>
+                        <div class="hero-trust-row">
+                            <div class="trust-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> USDA Organic</div>
+                            <div class="trust-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> GMO Free</div>
+                        </div>
+                    </div>
+                    <div class="hero-product">
+                        <div class="product-3d-container">
+                            <div class="product-glow"></div>
+                            <div class="floating-ring ring-1"></div>
+                            <div class="floating-ring ring-2"></div>
+                            <img src="images/moringa-powder.jpg" alt="Organic Moringa Powder" class="hero-product-img" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-badge" style="color: #2563eb; background: rgba(37,99,235,0.1);">
+                            Popular Choice
+                        </div>
+                        <h1 class="hero-title">
+                            Premium<br>
+                            <span class="gradient-text" style="background: linear-gradient(135deg, #2563eb, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Onion Powder</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Elevate your cooking with our pure, aromatic onion powder. Sourced from the finest organic farms for a robust flavor profile.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#products" class="btn btn-primary" style="background: linear-gradient(135deg, #2563eb, #0ea5e9); border: none;">
+                                <span>Shop Onion</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-product">
+                        <div class="product-3d-container">
+                            <div class="product-glow" style="background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%);"></div>
+                            <div class="floating-ring ring-1" style="border-color: rgba(37,99,235,0.1);"></div>
+                            <div class="floating-ring ring-2" style="border-color: rgba(37,99,235,0.08);"></div>
+                            <img src="images/onion-powder.jpg" alt="Organic Onion Powder" class="hero-product-img" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-badge" style="color: #d97706; background: rgba(217,119,6,0.1);">
+                            New Arrival
+                        </div>
+                        <h1 class="hero-title">
+                            Natural<br>
+                            <span class="gradient-text" style="background: linear-gradient(135deg, #d97706, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Banana Powder</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            A natural source of energy and potassium. Perfect for smoothies, baking, and healthy daily nutrition.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#products" class="btn btn-primary" style="background: linear-gradient(135deg, #d97706, #f59e0b); border: none;">
+                                <span>Shop Banana</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-product">
+                        <div class="product-3d-container">
+                            <div class="product-glow" style="background: radial-gradient(circle, rgba(217,119,6,0.12) 0%, transparent 70%);"></div>
+                            <div class="floating-ring ring-1" style="border-color: rgba(217,119,6,0.1);"></div>
+                            <div class="floating-ring ring-2" style="border-color: rgba(217,119,6,0.08);"></div>
+                            <img src="images/banana-powder.jpg" alt="Organic Banana Powder" class="hero-product-img" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation -->
+            <div class="hero-slider-nav">
+                <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"><div class="wheel"></div></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ====== PRODUCTS SECTION ====== -->
+    <section class="section products-section" id="products">
+        <div class="section-container">
+            <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap;">
+                <div>
+                    <span class="section-tag">Our Collection</span>
+                    <h2 class="section-title">Explore Our <span class="gradient-text">Best Organic Products</span></h2>
+                    <p class="section-subtitle">The finest organic powders sourced from nature to support your daily wellness worldwide.</p>
+                </div>
+                <div class="slider-controls" style="display:flex; gap:10px; margin-top:20px;">
+                    <button class="btn btn-outline btn-sm slider-btn" id="slideLeft" aria-label="Previous">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button class="btn btn-outline btn-sm slider-btn" id="slideRight" aria-label="Next">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="products-slider" id="productsSlider">
+                <!-- Product 1: Moringa -->
+                <div class="product-card" data-product="moringa">
+                    <div class="product-card-img-wrap">
+                        <img src="images/moringa-powder.jpg" alt="Reneplane Organic Moringa Powder" class="product-card-img">
+                        <span class="product-tag">Best Seller</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-name">Moringa Powder</h3>
+                        <p class="product-card-desc">Pure leaves without stems — nature's most nutrient-dense superfood.</p>
+                        <div class="product-card-meta">
+                            <span class="meta-chip">USDA Organic</span>
+                            <span class="meta-chip">2 lb</span>
+                        </div>
+                        <div class="product-card-footer">
+                            <span class="product-card-price">$29.99</span>
+                            <button class="btn btn-primary btn-sm add-to-cart-btn" data-name="Moringa Powder" data-price="29.99" data-img="images/moringa-powder.jpg">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2: Onion -->
+                <div class="product-card" data-product="onion">
+                    <div class="product-card-img-wrap">
+                        <img src="images/onion-powder.jpg" alt="Reneplane Organic Onion Powder" class="product-card-img">
+                        <span class="product-tag tag-popular">Popular</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-name">Onion Powder</h3>
+                        <p class="product-card-desc">Pure onion without stems — essential seasoning for every kitchen.</p>
+                        <div class="product-card-meta">
+                            <span class="meta-chip">USDA Organic</span>
+                            <span class="meta-chip">2 lb</span>
+                        </div>
+                        <div class="product-card-footer">
+                            <span class="product-card-price">$24.99</span>
+                            <button class="btn btn-primary btn-sm add-to-cart-btn" data-name="Onion Powder" data-price="24.99" data-img="images/onion-powder.jpg">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3: Banana -->
+                <div class="product-card" data-product="banana">
+                    <div class="product-card-img-wrap">
+                        <img src="images/banana-powder.jpg" alt="Reneplane Organic Banana Powder" class="product-card-img">
+                        <span class="product-tag tag-new">New</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-name">Banana Powder</h3>
+                        <p class="product-card-desc">Pure banana without stems — natural energy boost and nutrition.</p>
+                        <div class="product-card-meta">
+                            <span class="meta-chip">USDA Organic</span>
+                            <span class="meta-chip">2 lb</span>
+                        </div>
+                        <div class="product-card-footer">
+                            <span class="product-card-price">$22.99</span>
+                            <button class="btn btn-primary btn-sm add-to-cart-btn" data-name="Banana Powder" data-price="22.99" data-img="images/banana-powder.jpg">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4: Papaya Leaf -->
+                <div class="product-card" data-product="papaya">
+                    <div class="product-card-img-wrap">
+                        <img src="images/papaya-leaf-powder.jpg" alt="Reneplane Organic Papaya Leaf Powder" class="product-card-img">
+                        <span class="product-tag tag-trending">Trending</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-card-name">Papaya Leaf Powder</h3>
+                        <p class="product-card-desc">Pure papaya leaf without stems — herbal wellness support.</p>
+                        <div class="product-card-meta">
+                            <span class="meta-chip">USDA Organic</span>
+                            <span class="meta-chip">2 lb</span>
+                        </div>
+                        <div class="product-card-footer">
+                            <span class="product-card-price">$26.99</span>
+                            <button class="btn btn-primary btn-sm add-to-cart-btn" data-name="Papaya Leaf Powder" data-price="26.99" data-img="images/papaya-leaf-powder.jpg">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; width: 100%;">
+                <a href="products.html" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                    <span>View All Products</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== WHY CHOOSE US ====== -->
+    <section class="section details-section" id="details">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Our Promise</span>
+                <h2 class="section-title">Why Choose <span class="gradient-text">Reneplane?</span></h2>
+            </div>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <h3 class="detail-title">100% Pure Ingredients</h3>
+                    <p class="detail-desc">No stems, fillers, or additives — only pure, natural ingredients in every pack.</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon icon-blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                    </div>
+                    <h3 class="detail-title">Certified Organic</h3>
+                    <p class="detail-desc">USDA certified organic and non-GMO verified for complete peace of mind.</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon icon-purple">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <h3 class="detail-title">Nutrient Powerhouse</h3>
+                    <p class="detail-desc">Rich in vitamins, minerals, and antioxidants for your daily wellness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TRUST SECTION ====== -->
+    <section class="section trust-section" id="trust">
+        <div class="section-container">
+            <div class="trust-card">
+                <h2 class="trust-title">Trusted by <span class="gradient-text">Thousands</span></h2>
+                <div class="trust-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="15000">0</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="98">0</span>
+                        <span class="stat-label">% Satisfaction</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Countries Served</span>
+                    </div>
+                </div>
+                <div class="trust-features">
+                    <div class="trust-feat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Sourced from certified organic farms</span></div>
+                    <div class="trust-feat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg><span>Third-party tested for purity</span></div>
+                    <div class="trust-feat"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><span>Fast, secure shipping worldwide</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FAQ SECTION ====== -->
+    <section class="section faq-section" id="faq">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How do I use the powder products?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer"><p>Add 1–2 teaspoons to smoothies, juices, soups, or sprinkle over salads. It blends easily into any recipe.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Are these products suitable for vegans?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer"><p>Yes! All Reneplane powders are 100% plant-based, vegan, and free from any animal-derived ingredients.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How long does shipping take?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer"><p>Standard shipping takes 3–7 business days. Express options are available at checkout.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What is the shelf life?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer"><p>Our powders have a shelf life of 24 months when stored in a cool, dry place with the resealable pouch properly sealed.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-brand"><span class="brand-icon">🌿</span><span class="brand-text">Reneplane</span></a>
+                    <p class="footer-desc">Premium organic powders — pure, natural, and sustainably sourced for your wellness journey.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">Moringa Powder</a></li>
+                        <li><a href="#products">Onion Powder</a></li>
+                        <li><a href="#products">Banana Powder</a></li>
+                        <li><a href="#products">Papaya Leaf Powder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#details">About Us</a></li>
+                        <li><a href="#trust">Quality</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Reneplane. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/></svg></a>
+                    <a href="#" aria-label="Twitter" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+                    <a href="#" aria-label="Facebook" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>

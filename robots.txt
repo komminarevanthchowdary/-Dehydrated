@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reneplane.com/sitemap.xml
+
+# Keywords:
+# Reneplane, best organic powders, organic moringa powder, organic onion powder, organic banana powder
+# organic papaya leaf powder, natural superfoods, USDA organic powders, health supplements, organic diet powders
+# best superfood powders USA, organic powder products UK, premium organic powders Canada, natural health supplements Australia
+# organic nutritional powders Brazil, best organic powders Philippines, pure moringa powder, pure onion powder
+# pure banana powder, pure papaya leaf powder, buy organic powders online, top rated organic powders, best organic superfoods
+# natural wellness powders, 100% pure organic powders, non-GMO organic powders, vegan superfood powders
+# plant-based health powders, organic food supplements, best natural powders, organic superfood blends
+# immune support powders, organic energy powders, pure organic spices, best organic onion seasoning
+# organic banana smoothie powder, organic moringa leaf extract, organic papaya leaf supplement, high quality organic powders
+# best organic superfoods USA, best organic superfoods UK, best organic superfoods Canada, best organic superfoods Australia
+# best organic superfoods Brazil, best organic superfoods Philippines, worldwide shipping organic powders
+# global organic powder delivery, buy moringa powder USA, buy moringa powder UK, buy moringa powder Canada
+# buy moringa powder Australia, buy moringa powder Brazil, buy moringa powder Philippines, organic wellness products
+# daily organic supplements, best organic super greens, natural organic seasoning, premium organic baking ingredients
+# best organic smoothie powders, pure organic health products, natural diet supplements, USDA certified superfoods
+# best organic nutrition, organic dietary powders, natural stamina powders, organic cooking powders, raw organic powders
+# pure botanical powders, best organic extracts, natural wellness supplements, pure green powders, organic fruit powders
+# organic vegetable powders, premium natural powders, best organic food powders, organic nutrition supplements
+# healthy organic lifestyle products, organic moringa capsules alternative, organic immunity boosters, pure plant extracts
+# best organic health supplements, natural vitality powders, organic superfood powder blends, organic superfood nutrition
+# premium natural superfoods, best organic food supplements, pure leaf powders, best organic pantry staples
+# organic superfood drinks, top organic powder brand, reneplane organic products, premium wellness powders
+# organic holistic health, best organic ingredients, best pure organic powders, premium natural health foods
+# organic nutritional supplements, best organic superfood powder brand, natural organic wellness supplements
+# highest quality organic powders, best organic powders India, organic superfoods Mumbai, natural health supplements Delhi
+# buy organic powders Bangalore, pure moringa powder Hyderabad, organic onion powder Chennai, organic banana powder Kolkata
+# organic papaya leaf powder Pune, organic wellness products Ahmedabad
