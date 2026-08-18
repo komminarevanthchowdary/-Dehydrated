@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "seed": "node scripts/seed.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "repository": {
     "type": "git",
@@ -32,5 +34,8 @@
     "helmet": "^8.3.0",
     "mongodb-memory-server": "^11.2.0",
     "mongoose": "^9.9.3"
+  },
+  "devDependencies": {
+    "wrangler": "^4.123.0"
   }
 }
