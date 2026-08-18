@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Auth0 SPA SDK -->
-    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
-    <link rel="stylesheet" href="style.css?v=2">
+    <!-- Google Identity Services (Official Free Google Sign-In) -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="stylesheet" href="style.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -100,72 +100,63 @@
                 <div class="auth-header">
                     <span class="brand-icon-lg">🌿</span>
                     <h2>Welcome to Reneplane</h2>
-                    <p>Sign in or create an account to continue</p>
+                    <p>Sign in or create an account to manage orders</p>
                 </div>
-                <button class="btn btn-auth0" id="auth0LoginBtn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
-                    <span>Continue with Auth0</span>
-                </button>
-                <div class="auth-divider"><span>or sign in manually</span></div>
-                <form class="auth-form" id="manualAuthForm">
-                    <div class="form-group">
-                        <label for="authFullName" class="form-label">Full Name <span class="required">*</span></label>
-                        <input type="text" id="authFullName" class="form-input" placeholder="John Doe" required>
-                        <span class="form-error" id="authNameError"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="authEmail" class="form-label">Email ID <span class="required">*</span></label>
-                        <input type="email" id="authEmail" class="form-input" placeholder="john@example.com" required>
-                        <span class="form-error" id="authEmailError"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="authMobile" class="form-label">Mobile Number <span class="required">*</span></label>
-                        <div class="phone-input-group">
-                            <select id="authCountryCode" class="form-input phone-code-select">
-                                <option value="+91">🇮🇳 +91</option>
-                                <option value="+1">🇺🇸 +1</option>
-                                <option value="+44">🇬🇧 +44</option>
-                                <option value="+61">🇦🇺 +61</option>
-                                <option value="+971">🇦🇪 +971</option>
-                                <option value="+65">🇸🇬 +65</option>
-                                <option value="+81">🇯🇵 +81</option>
-                            </select>
-                            <input type="tel" id="authMobile" class="form-input phone-number-input" placeholder="98765 43210" required>
-                        </div>
-                        <span class="form-error" id="authMobileError"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full" id="sendOtpBtn">
-                        <span>Send Verification Code</span>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                <div class="auth-actions" style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">
+                    <!-- Google Sign-In Button -->
+                    <button type="button" class="btn btn-full" id="googleSignInBtn" style="background:#ffffff; color:#374151; border:1px solid #d1d5db; box-shadow:0 1px 3px rgba(0,0,0,0.08); display:flex; align-items:center; justify-content:center; gap:10px; font-weight:600; transition:all 0.2s ease;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                        <span>Continue with Google</span>
                     </button>
-                </form>
+                    <div id="googleButtonHidden" style="display:none;"></div>
+                    
+                    <div style="display:flex; align-items:center; text-align:center; margin: 6px 0;">
+                        <hr style="flex:1; border:none; border-top:1px solid #e5e7eb;">
+                        <span style="padding:0 10px; color:var(--clr-text-light); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">or login with mobile</span>
+                        <hr style="flex:1; border:none; border-top:1px solid #e5e7eb;">
+                    </div>
+
+                    <form id="phoneAuthForm" style="display:flex; flex-direction:column; gap:12px;">
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label class="form-label" style="font-size:12px; margin-bottom:4px;">Mobile Number</label>
+                            <div style="display:flex; gap:8px;">
+                                <input type="text" id="authCountryCode" class="form-input" value="+91" style="width:70px; text-align:center; padding:10px 4px; font-weight:600;" readonly>
+                                <input type="tel" id="authPhoneInput" class="form-input" placeholder="9876543210" style="flex:1;" required maxlength="15">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label class="form-label" style="font-size:12px; margin-bottom:4px;">Your Name (Optional)</label>
+                            <input type="text" id="authNameInput" class="form-input" placeholder="e.g. John Doe">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="phoneSubmitBtn" style="margin-top:4px;">
+                            <span>Send OTP</span>
+                        </button>
+                    </form>
+                </div>
             </div>
 
-            <!-- Step 2: OTP Verification -->
+            <!-- Step 2: Enter OTP -->
             <div class="auth-step" id="authStep2" style="display:none;">
                 <div class="auth-header">
-                    <div class="otp-icon-wrap">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span class="brand-icon-lg">📱</span>
+                    <h2>Verify Mobile</h2>
+                    <p>Enter the 6-digit code sent to <strong id="displayTargetPhone" style="color:var(--clr-primary);"></strong></p>
+                </div>
+                <form id="otpAuthForm" style="display:flex; flex-direction:column; gap:14px; margin-top:16px;">
+                    <div class="form-group">
+                        <input type="text" id="otpCodeInput" class="form-input" placeholder="123456" maxlength="6" pattern="[0-9]{6}" required style="text-align:center; font-size:26px; font-weight:700; letter-spacing:6px; padding:12px 6px;">
                     </div>
-                    <h2>Verify Your Number</h2>
-                    <p>We've sent a 6-digit code to <strong id="otpSentTo"></strong></p>
-                </div>
-                <div class="otp-inputs" id="otpInputs">
-                    <input type="text" maxlength="1" class="otp-box" data-index="0" inputmode="numeric" autocomplete="one-time-code">
-                    <input type="text" maxlength="1" class="otp-box" data-index="1" inputmode="numeric">
-                    <input type="text" maxlength="1" class="otp-box" data-index="2" inputmode="numeric">
-                    <input type="text" maxlength="1" class="otp-box" data-index="3" inputmode="numeric">
-                    <input type="text" maxlength="1" class="otp-box" data-index="4" inputmode="numeric">
-                    <input type="text" maxlength="1" class="otp-box" data-index="5" inputmode="numeric">
-                </div>
-                <span class="form-error otp-error" id="otpError"></span>
-                <button class="btn btn-primary btn-full" id="verifyOtpBtn">
-                    <span>Verify & Continue</span>
-                </button>
-                <div class="otp-resend">
-                    <span>Didn't receive the code?</span>
-                    <button class="link-btn" id="resendOtpBtn" disabled>Resend in <span id="resendTimer">30</span>s</button>
-                </div>
+                    <div id="otpTimerWrap" style="text-align:center; font-size:13px; color:var(--clr-text-light);">
+                        <span>Didn't receive code? </span>
+                        <button type="button" id="resendOtpBtn" style="background:none; border:none; color:var(--clr-primary); font-weight:600; cursor:pointer; text-decoration:underline; padding:0; display:inline;" disabled>Resend in <span id="otpCountdown">30</span>s</button>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="otpSubmitBtn">
+                        <span>Verify & Login</span>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-full" id="otpBackBtn">
+                        <span>Change Number</span>
+                    </button>
+                </form>
             </div>
 
             <!-- Step 3: Verified -->
@@ -178,7 +169,7 @@
                         </svg>
                     </div>
                     <h2>Welcome, <span id="verifiedName"></span>!</h2>
-                    <p>Your account is verified. You can now shop and checkout.</p>
+                    <p>Your account is verified. You are now logged in.</p>
                 </div>
                 <button class="btn btn-primary btn-full" id="startShoppingBtn">
                     <span>Start Shopping</span>
@@ -260,23 +251,25 @@
                 <h2>Partner with Us</h2>
                 <p>Join hands with Reneplane to distribute premium organic powders.</p>
             </div>
-            <form class="auth-form" id="partnerForm">
+            <form class="auth-form" id="partnerForm" action="https://formsubmit.co/contact@reneplane.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Leads for Dehydrated Products">
                 <div class="form-group">
                     <label class="form-label">Company Name <span class="required">*</span></label>
-                    <input type="text" id="partnerCompany" class="form-input" placeholder="Your Business" required>
+                    <input type="text" name="Company Name" id="partnerCompany" class="form-input" placeholder="Your Business" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Contact Person <span class="required">*</span></label>
-                    <input type="text" id="partnerName" class="form-input" placeholder="John Doe" required>
+                    <input type="text" name="Contact Person" id="partnerName" class="form-input" placeholder="John Doe" required>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label class="form-label">Email <span class="required">*</span></label>
-                        <input type="email" id="partnerEmail" class="form-input" placeholder="john@example.com" required>
+                        <input type="email" name="Email" id="partnerEmail" class="form-input" placeholder="john@example.com" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Phone <span class="required">*</span></label>
-                        <input type="tel" id="partnerPhone" class="form-input" placeholder="+1 123 456 7890" required>
+                        <input type="tel" name="Phone" id="partnerPhone" class="form-input" placeholder="+1 123 456 7890" required>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-full" id="partnerSubmitBtn">
@@ -743,6 +736,6 @@
     <!-- Toast Notification -->
     <div class="toast-container" id="toastContainer"></div>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=9"></script>
 </body>
 </html>
