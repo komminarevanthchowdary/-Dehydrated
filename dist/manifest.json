@@ -1,0 +1,22 @@
+{
+  "name": "Reneplane - Organic Powders",
+  "short_name": "Reneplane",
+  "description": "Best Organic Powder Products. 100% pure, USDA certified organic powders including Moringa, Onion, Banana, and Papaya Leaf.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "categories": ["shopping", "health", "food"],
+  "icons": [
+    {
+      "src": "images/moringa-powder.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "images/moringa-powder.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

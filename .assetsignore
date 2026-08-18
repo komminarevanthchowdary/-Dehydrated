@@ -1,0 +1,17 @@
+**/node_modules/**
+node_modules/**
+node_modules
+.git/**
+.wrangler/**
+.vscode/**
+.cursor/**
+**/*.log
+**/*.py
+package*.json
+server.js
+routes/**
+models/**
+middleware/**
+scripts/**
+.env*
+check*
