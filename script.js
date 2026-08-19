@@ -213,21 +213,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const googleSignInBtn = document.getElementById('googleSignInBtn');
     if (googleSignInBtn) {
         googleSignInBtn.addEventListener('click', () => {
-            // If GSI prompt is available, trigger it
+            // If GSI is available, render a proper Google button inside a temporary container
             if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
                 try {
-                    google.accounts.id.prompt((notification) => {
-                        if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
-                            // Prompt with demo/quick google simulation for instant smooth testing
-                            promptQuickGoogleLogin();
-                        }
+                    // Create a temporary hidden container for the Google rendered button
+                    let gDiv = document.getElementById('g_id_signin_tmp');
+                    if (!gDiv) {
+                        gDiv = document.createElement('div');
+                        gDiv.id = 'g_id_signin_tmp';
+                        gDiv.style.position = 'fixed';
+                        gDiv.style.top = '50%';
+                        gDiv.style.left = '50%';
+                        gDiv.style.transform = 'translate(-50%, -50%)';
+                        gDiv.style.zIndex = '100000';
+                        gDiv.style.background = '#fff';
+                        gDiv.style.padding = '24px';
+                        gDiv.style.borderRadius = '16px';
+                        gDiv.style.boxShadow = '0 8px 32px rgba(0,0,0,0.25)';
+                        document.body.appendChild(gDiv);
+                    }
+                    gDiv.innerHTML = '<p style="margin:0 0 12px;font-weight:600;color:#333;text-align:center;">Sign in with Google</p><div id="g_btn_render"></div><button id="g_close_tmp" style="margin-top:12px;width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;background:#f5f5f5;cursor:pointer;">Cancel</button>';
+                    
+                    google.accounts.id.renderButton(
+                        document.getElementById('g_btn_render'),
+                        { theme: 'outline', size: 'large', width: 280, text: 'signin_with' }
+                    );
+
+                    document.getElementById('g_close_tmp').addEventListener('click', () => {
+                        gDiv.remove();
                     });
+
                     return;
                 } catch (e) {
-                    promptQuickGoogleLogin();
+                    console.warn('GSI renderButton failed:', e);
+                    showToast('Google Sign-In is not available. Please try mobile login.', 'info');
                 }
             } else {
-                promptQuickGoogleLogin();
+                showToast('Google Sign-In is loading. Please wait a moment and try again.', 'info');
             }
         });
     }
