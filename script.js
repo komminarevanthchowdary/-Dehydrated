@@ -176,6 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Google Sign-In Setup
     function handleGoogleCredentialResponse(response) {
+        // Remove the temporary popup if it exists
+        const gDiv = document.getElementById('g_id_signin_tmp');
+        if (gDiv) gDiv.remove();
+
         if (!response || !response.credential) return;
 
         apiFetch('/api/auth/google', {
