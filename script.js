@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
             try {
                 google.accounts.id.initialize({
-                    client_id: "354897608670-sample.apps.googleusercontent.com", // standard fallback
+                    client_id: "849114166015-4e93uniqijfkqmoh661amtadobgh8asc.apps.googleusercontent.com",
                     callback: handleGoogleCredentialResponse,
                     auto_select: false,
                     cancel_on_tap_outside: true
