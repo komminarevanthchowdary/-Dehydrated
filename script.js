@@ -39,10 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const res = await fetch(url, config);
-            const data = await res.json();
-            if (!res.ok) throw new Error(data.message || 'Request failed');
+            const contentType = res.headers.get('content-type') || '';
+            let data;
+            if (contentType.includes('application/json')) {
+                data = await res.json();
+            } else {
+                const text = await res.text();
+                console.warn('apiFetch received non‑JSON response', { url, status: res.status, text });
+                // Return raw text in a wrapper; callers that expect JSON will see undefined fields.
+                data = { raw: text };
+            }
+            if (!res.ok) throw new Error((data && data.message) || 'Request failed');
             return data;
         } catch (err) {
+            // Preserve original error stack and also log for debugging
+            console.error('apiFetch error:', err);
             throw err;
         }
     }
